@@ -15,7 +15,8 @@ public class MemberDAO {
 	private List<Member> members = new ArrayList<Member>();
 
 	public Object getMemberById(String id) {
-		// TODO Auto-generated method stub
+		//멤버중에서 id가 중복인지 확인. 스트림 쓰면 될거같은데?
+		
 		return null;
 	}
 

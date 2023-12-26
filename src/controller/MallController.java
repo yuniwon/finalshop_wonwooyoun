@@ -59,7 +59,7 @@ public class MallController {
 		menuCom = mapCont.get("MallMain");
 		menuCom.init();
 		update();
-
+		
 	}
 
 	public void update() {
@@ -69,6 +69,7 @@ public class MallController {
 					menuCom = mapCont.get(next);
 					menuCom.init();
 				} else {
+					System.out.println("여기는?");
 					return;
 				}
 			}

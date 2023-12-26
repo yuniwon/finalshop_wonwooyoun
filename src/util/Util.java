@@ -1,15 +1,32 @@
 package util;
 
-public class Util {
+import java.util.Scanner;
 
-	public static int getValue(String string, int i, int j) {
-		// TODO Auto-generated method stub
-		return 0;
+public class Util {
+	private static Scanner sc = new Scanner(System.in);
+	
+	public static int getValue(String msg, int i, int j) {
+		System.out.println(msg + "[" + i + "-" + j + "]");
+		while(true) {
+		try {
+			int value = sc.nextInt();
+			if(value < i || value > j) {
+				System.out.println(i+" ~ " + j +" 사이의 값 입력");
+				continue;
+			}
+			return value;
+		} catch (Exception e) {
+			System.out.println("숫자 값 입력");
+		}
+		}
 	}
 
-	public static String getValue(String string) {
+	public static String getValue(String msg) {
+		System.out.println(msg +" 입력 : ");
+		String value = sc.next();
+		sc.nextLine();
 		// TODO Auto-generated method stub
-		return null;
+		return value;
 	}
 
 }
