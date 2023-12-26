@@ -11,13 +11,12 @@ import menu_member.*;
 public class MallController {
 	private MallController() {}
 
-	static private MallController instance = new MallController();
+	private static MallController instance = new MallController();
 
-	static public MallController getInstance() {
+	public static MallController getInstance() {
 		return instance;
 	}
 	
-
 	private String loginId;
 	private String next;
 	private MenuCommand menuCom;

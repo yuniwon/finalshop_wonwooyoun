@@ -37,6 +37,17 @@ public class Item {
 	public void setPrice(int price) {
 		this.price = price;
 	}
+	public Item(int itemNum, String categoryName, String itemName, int price) {
+		super();
+		this.itemNum = itemNum;
+		this.categoryName = categoryName;
+		this.itemName = itemName;
+		this.price = price;
+	}
 	
+	@Override
+	public String toString() {
+		return "%d %d %s %s %d".formatted(num,itemNum,categoryName,itemName,price);
+	}
 	
 }

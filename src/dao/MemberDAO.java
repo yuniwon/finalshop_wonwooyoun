@@ -1,5 +1,6 @@
 package dao;
 
+import java.nio.file.Path;
 import java.util.*;
 
 import dto.Member;
@@ -29,5 +30,15 @@ public class MemberDAO {
 		// TODO Auto-generated method stub
 		return null;
 	}
+
+    public void addMember(Member temp) {
+		members.add(temp);
+    }
+
+	public List<Member> getMembers() {
+		return members;
+	}
+
+
 
 }

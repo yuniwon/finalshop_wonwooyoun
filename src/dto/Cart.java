@@ -38,6 +38,16 @@ public class Cart {
 	public void setItemCnt(int itemCnt) {
 		this.itemCnt = itemCnt;
 	}
-	
+	public Cart(int cartNum, String id, int itemNum, int itemCnt) {
+		super();
+		this.cartNum = cartNum;
+		this.id = id;
+		this.itemNum = itemNum;
+		this.itemCnt = itemCnt;
+	}
+	@Override
+	public String toString() {
+		return "%d %d %s %d %d".formatted(num,cartNum,id,itemNum,itemCnt);
+	}
 	
 }

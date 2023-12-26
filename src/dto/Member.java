@@ -37,6 +37,18 @@ public class Member {
 	public void setMemberName(String memberName) {
 		this.memberName = memberName;
 	}
+	public Member(int memberNum, String id, String pw, String memberName) {
+		super();
+		this.memberNum = memberNum;
+		this.id = id;
+		this.pw = pw;
+		this.memberName = memberName;
+	}
+	@Override
+	public String toString() {
+		return "%d %d %s %s %s".formatted(num,memberNum,id,pw,memberName);
+	}
+	
 	
 	
 }

@@ -54,6 +54,16 @@ public class Board {
 	public void setHits(int hits) {
 		this.hits = hits;
 	}
+	public Board(int boradNum, String title, String id, String date, String contents, int hits) {
+		super();
+		this.boradNum = boradNum;
+		this.title = title;
+		this.id = id;
+		this.date = date;
+		this.contents = contents;
+		this.hits = hits;
+	}
+	
 	
 	
 }

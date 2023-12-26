@@ -17,6 +17,7 @@ public class Util {
 			return value;
 		} catch (Exception e) {
 			System.out.println("숫자 값 입력");
+			sc.nextLine();
 		}
 		}
 	}
