@@ -47,7 +47,7 @@ public class Member {
 	}
 	@Override
 	public String toString() {
-		return "%d %d %s %s %s".formatted(num,memberNum,id,pw,memberName);
+		return "%d/%s/%s/%s".formatted(memberNum,id,pw,memberName);
 	}
 	
 	

@@ -47,7 +47,7 @@ public class Item {
 	
 	@Override
 	public String toString() {
-		return "%d %d %s %s %d".formatted(num,itemNum,categoryName,itemName,price);
+		return "%d/%s/%s/%d".formatted(itemNum,categoryName,itemName,price);
 	}
 
 

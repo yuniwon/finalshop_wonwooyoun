@@ -111,4 +111,22 @@ public class FileDAO {
 	
 	
 	}
+    public void saveFile() {
+		// 각 파일에 저장
+		// 파일이 없으면 생성
+		// files 폴더에 저장
+		// 파일에 저장할때는 / 구분자로 저장
+		// Board : 번호 / 제목 / 내용 / 작성자 / 작성일 / 조회수
+		// Member : 번호 / 아이디 / 비밀번호 / 이름
+		// Item : 번호 / 카테고리 / 아이템명 / 가격
+		// Cart : 번호 / 아이디 / 아이템번호 / 수량
+		try {
+			Files.write(Paths.get("src/files/board.txt"), BoardDAO.getInstance().getBoards().stream().map(board -> board.toString()).toList(), StandardCharsets.UTF_8);
+			Files.write(Paths.get("src/files/member.txt"), MemberDAO.getInstance().getMembers().stream().map(member -> member.toString()).toList(), StandardCharsets.UTF_8);
+			Files.write(Paths.get("src/files/item.txt"), ItemDAO.getInstance().getItems().stream().map(item -> item.toString()).toList(), StandardCharsets.UTF_8);
+			Files.write(Paths.get("src/files/cart.txt"), CartDAO.getInstance().getCarts().stream().map(cart -> cart.toString()).toList(), StandardCharsets.UTF_8);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+    }
 }

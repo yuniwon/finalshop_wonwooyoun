@@ -129,6 +129,13 @@ public class BoardDAO {
 
     }
 
+    public void deleteBoard() {
+        // 관리자는 모든 게시글 삭제 가능
+        int num = Util.getValue("글번호 입력", 1, Board.getNum());
+        boards.remove(num-1);
+        System.out.println("[ 게시글이 삭제되었습니다 ]");
+    }
+
 
 
     

@@ -47,7 +47,7 @@ public class Cart {
 	}
 	@Override
 	public String toString() {
-		return "%d %d %s %d %d".formatted(num,cartNum,id,itemNum,itemCnt);
+		return "%d/%s/%d/%d".formatted(cartNum,id,itemNum,itemCnt);
 	}
 	
 }

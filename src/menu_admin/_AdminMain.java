@@ -29,9 +29,10 @@ public class _AdminMain implements MenuCommand {
 		}else if(sel == 3){
 			cont.setNext("AdminBoard");
 		}else if(sel == 4){
+			cont.setLoginId(null);
 			cont.setNext("MallMain");
 		}else if(sel == 5){
-			cont.setNext("FileSave");
+			dao.FileDAO.getInstance().saveFile();
 		}
 
 		return false;

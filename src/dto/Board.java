@@ -10,7 +10,7 @@ public class Board {
 	private int hits;
 	@Override
 	public String toString() {
-		return "%d %d %s %s %s %s %d" .formatted(num,boradNum,title,id,date,contents,hits);
+		return "%d/%s/%s/%s/%s/%d" .formatted(boradNum,title,id,date,contents,hits);
 	}
 	public static int getNum() {
 		return num;
