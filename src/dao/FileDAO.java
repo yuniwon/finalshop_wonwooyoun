@@ -1,6 +1,10 @@
 package dao;
 
+import java.io.BufferedInputStream;
+import java.io.FileInputStream;
 import java.io.IOException;
+import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -48,6 +52,21 @@ public class FileDAO {
 	}
 
 	public void loadAllFiles() {
+		// try(BufferedInputStream bis = new BufferedInputStream(new FileInputStream(Path.of("src/files/board.txt").toFile()))){
+
+		// 	Charset charset = StandardCharsets.UTF_8;
+		// 	// 버퍼 인풋 스트림에서  byte[1024] 씩 가져오는것 
+		// 	byte[] buffer = new byte[1024];
+		// 	int readByte =0;
+		// 	int count =0;
+		// 	while((readByte = bis.read(buffer)) != -1) {
+		// 		String data = new String(buffer, 0, readByte,charset);
+		// 		System.out.println(data);
+		// 	}
+		// }
+		// catch(IOException e) {
+		// 	e.printStackTrace();
+		// }
 		try {
 			Files.list(Paths.get("src/files")).forEach(path -> { //files에 있는 파일들을 읽어서 각각의 DAO에 저장
 				try {
@@ -55,7 +74,7 @@ public class FileDAO {
 						String[] arr = line.split("/");
 						switch (path.getFileName().toString()) {
 						case "board.txt":
-						Board temp = new Board(Integer.parseInt(arr[0]), arr[1], arr[2], arr[3], arr[4], Integer.parseInt(arr[5]));
+						Board temp = new Board(Integer.parseInt(arr[0]), arr[1], arr[3], arr[4], arr[2], Integer.parseInt(arr[5]));
 							BoardDAO.getInstance().addBoard(temp);
 							break;
 							case "member.txt":
@@ -82,10 +101,10 @@ public class FileDAO {
 			e1.printStackTrace();
 		}
 		
-		BoardDAO.getInstance().getBoards().forEach(System.out::println);
-		MemberDAO.getInstance().getMembers().forEach(System.out::println);
-		ItemDAO.getInstance().getItems().forEach(System.out::println);
-		CartDAO.getInstance().getCarts().forEach(System.out::println);
+		// BoardDAO.getInstance().getBoards().forEach(System.out::println);
+		// MemberDAO.getInstance().getMembers().forEach(System.out::println);
+		// ItemDAO.getInstance().getItems().forEach(System.out::println);
+		// CartDAO.getInstance().getCarts().forEach(System.out::println);
 	
 
 

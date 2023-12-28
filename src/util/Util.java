@@ -1,5 +1,6 @@
 package util;
 
+import java.time.LocalDate;
 import java.util.Scanner;
 
 public class Util {
@@ -28,6 +29,11 @@ public class Util {
 		sc.nextLine();
 		// TODO Auto-generated method stub
 		return value;
+	}
+
+	public static String getDate() {
+		// 현재 날짜를 반환
+		return LocalDate.now().toString();
 	}
 
 }

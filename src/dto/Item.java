@@ -49,5 +49,7 @@ public class Item {
 	public String toString() {
 		return "%d %d %s %s %d".formatted(num,itemNum,categoryName,itemName,price);
 	}
+
+
 	
 }

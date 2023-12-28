@@ -43,6 +43,7 @@ public class Member {
 		this.id = id;
 		this.pw = pw;
 		this.memberName = memberName;
+	
 	}
 	@Override
 	public String toString() {
